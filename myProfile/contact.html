@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contact</title>
+    <link href="./contact.css" rel="stylesheet" />
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+  <body>
+    <section>
+      <div class="container">
+        <div class="navbar">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="about.html" class="nav-item">About</a>
+          <a href="contact.html" class="nav-item">Contact</a>
+        </div>
+      </div>
+      <div class="wrapper">
+        <h1>Contact Form</h1>
+
+        <p>
+          If you have any questions about me or my work, feel free to fill out
+          the form bellow and I'd be more than happy to answer them.
+        </p>
+      </div>
+      <form>
+        <input type="hidden" />
+        <fieldset>
+          <legend>Your contact information</legend>
+          <label for="firstname">First name*:</label>
+          <input
+            type="name"
+            id="firstname"
+            name="firstname"
+            required
+            onchange="checkEmptyFields(firstName, phone, email, comments)"
+          />
+          <label for="Lastname">Last name:</label>
+          <input
+            type="name"
+            id="lastname"
+            name="lastname"
+            onchange="checkEmptyFields(firstName, phone, email, comments)"
+          />
+          <label for="phone">Phone number*:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            onchange="checkEmptyFields(firstName, phone, email, comments)"
+          />
+          <label for="email">E-mail*:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            onchange="checkEmptyFields(firstName, phone, email, comments)"
+          />
+          <label for="comments">Comments*:</label>
+          <input
+            type="text"
+            id="comments"
+            name="comments"
+            required
+            onchange="checkEmptyFields(firstName, phone, email, comments)"
+          />
+          <p>* Required fields</p>
+        </fieldset>
+        <button id="submit" type="button">Submit</button>
+      </form>
+      <script src="index.js"></script>
+      <footer>
+        <ul>
+          <li>
+            <a
+              href="file:///C:/Users/chaou/Desktop/Chaouat_Clara_ITCPrecourse/index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="file:///C:/Users/chaou/Desktop/Chaouat_Clara_ITCPrecourse/about.html"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="file:///C:/Users/chaou/Desktop/Chaouat_Clara_ITCPrecourse/contact.html"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="bottom">
+          <div>"This page was built using:</div>
+          <div id="target"></div>
+          <script>
+            const languages = ["HTML", "CSS", "JavaScript", '"'];
+            const getElement = document.getElementById("target");
+            getElement.innerHTML = languages;
+          </script>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
